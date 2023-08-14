@@ -1,38 +1,163 @@
-.App {
-  text-align: center;
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.my_container {
+    max-width: 1140px;
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.font_sm {
+    font-size: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.font_xl {
+    font-size: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+@font-face {
+    font-family: Cooper_Black;
+    src: url("./assets/fonts/COOPBL.dbe0cbaa54b6ad6fa396.TTF");
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+    font-family: Fontspring_light;
+    src: url("./assets/fonts/Fontspring-DEMO-commuterssans-light.8c81fb89b484cf9b3f63.otf");
 }
+
+@font-face {
+    font-family: Fontspring_regular;
+    src: url('./assets/fonts/Fontspring-DEMO-commuterssans-regular.82364e98e5c912a4eb71.otf');
+}
+
+@font-face {
+    font-family: Fontspring_semibold;
+    src: url("./assets/fonts/Fontspring-DEMO-commuterssans-semibold.31132f4522ab6573886f.otf");
+}
+
+.ff_Copper_black {
+    font-family: "Cooper_Black", sans-serif;
+}
+
+.ff_Fontspring_light {
+    font-family: "Fontspring_light", sans-serif;
+}
+
+.ff_Fontspring_regular {
+    font-family: "Fontspring_regular", sans-serif;
+}
+
+.ff_Fontspring_semibold {
+    font-family: "Fontspring_semibold", sans-serif;
+}
+
+.color_black {
+    color: black !important;
+}
+
+.color_white {
+    color: white !important;
+}
+
+.bg_color {
+    background: linear-gradient(180deg, #CDCFD0 0%, #D8D7D7 15.99%, #E2E3E4 31.02%, #939091 48.19%, #7B7778 61.89%, #585455 77.07%, #3A3637 89.88%, #231F20 100%), linear-gradient(180deg, #979797 0%, #C7C7C7 29.80%, #DADADA 41.52%, #8B8B8B 65.40%, #292526 100%);
+}
+
+.nav_hover {
+    transition: all 200ms linear;
+}
+
+.nav_hover:hover {
+    color: #F98ABC !important;
+}
+
+.nav_hover::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    border-radius: 10px;
+    background-color: #F98ABC;
+    transition: all 300ms linear;
+}
+.nav_hover:hover::after{
+    width: 100%;
+    left:0 ;
+}
+.GENESIS{
+    color: #F98ABC !important;
+}
+.ms_lg_30 {
+    margin-left: 30px;
+}
+.H1GENESIS{
+    background: linear-gradient(0deg, #AF5B9A 0%, #CDCBCD 3.67%, #FC6FA5 8.31%, #552C4E 15.10%, #B9536C 22.56%, #C768B5 31.57%, #CDCCCD 39.43%, #B35C9E 47.66%, #CB4699 53.70%, #763B69 58.50%, #E172CC 73.57%, #7A3D6E 81.61%, #63233D 90.57%, #CCC8CB 95.51%, #9B5086 100%);
+    padding: 15px 21px;
+}
+.para_1{
+    max-width: 268px;
+}
+/* .center_line{
+    border-radius: 19.5px;
+background: linear-gradient(90deg, #B05B9B 0%, #CECCCE 3.67%, #FD6FA6 8.31%, #552C4E 15.10%, #BA536C 22.56%, #C868B6 31.57%, #CECDCE 39.43%, #B45C9F 47.66%, #CC469A 53.70%, #763B69 58.50%, #E272CD 73.57%, #7A3D6E 81.61%, #63233D 90.57%, #CDC9CC 95.51%, #9C5087 100%), #D9D9D9;
+width: 32px;
+height: 100%;
+} */
+
+@media (max-width:991.9px) {
+    .nav_sm {
+        position: absolute;
+        left: -100%;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background: #DAD9DA;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        transition: all 500ms linear;
+    }
+
+    .nav_show {
+        left: 0;
+    }
+
+    .overflow_hidden {
+        overflow: hidden;
+    }
+
+    .close_nav {
+        position: absolute;
+        right: 10%;
+        top: 25px;
+        cursor: pointer;
+    }
+
+    .ms_lg_30 {
+        margin-left: 0px !important;
+    }
+}
+
+
+@media (min-width:575.9) {}
+
+@media (min-width:767.9) {}
+
+@media (min-width:991.9) {}
+
+@media (min-width:1199.9) {}
+
+@media (min-width:1399.9) {}
+
+@media (min-width:1599.9) {}
